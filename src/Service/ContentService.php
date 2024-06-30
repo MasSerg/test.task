@@ -30,6 +30,7 @@ readonly class ContentService implements ContentServiceInterface
      *
      * @param string $inputFile
      * @return array
+     * @throws Exception
      */
     public function processContent(string $inputFile): array
     {
@@ -74,6 +75,7 @@ readonly class ContentService implements ContentServiceInterface
      *
      * @param string $inputFile
      * @return array
+     * @throws Exception
      */
     private function getData(string $inputFile): array
     {
@@ -90,6 +92,7 @@ readonly class ContentService implements ContentServiceInterface
      *
      * @param string $key
      * @return float
+     * @throws Exception
      */
     private function getRate(string $key): float
     {
@@ -110,6 +113,7 @@ readonly class ContentService implements ContentServiceInterface
      *
      * @param int $code
      * @return string|null
+     * @throws Exception
      */
     private function getBinCurrency(int $code): ?string
     {

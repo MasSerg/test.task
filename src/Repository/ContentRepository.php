@@ -42,11 +42,8 @@ readonly class ContentRepository implements ContentRepositoryInterface
      */
     public function getBinList($value): array
     {
-        $binFile = __DIR__ . '/../../' . $value . '.txt';
-        $binResults = $this->getFileContents($binFile);
-
         $binURL = $_ENV['BIN_LIST_URL'];
-//        $binResults = $this->getFileContents(sprintf('%s/%s', $binURL, $value));
+        $binResults = $this->getFileContents(sprintf('%s/%s', $binURL, $value));
 
         if (!$binResults) {
             $errorHandler = new ErrorHandler('bin list is empty');

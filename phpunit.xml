@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+>
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./tests/Feature</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="BIN_LIST_URL" value="https://lookup.binlist.net"/>
+        <env name="EXCHANGE_RATE_URL" value="http://api.exchangeratesapi.io/v1/latest"/>
+        <env name="EXCHANGE_RATE_ACCESS_KEY" value="0c2c093ff5b33e5b519ace6ec9194071"/>
+    </php>
+</phpunit>
