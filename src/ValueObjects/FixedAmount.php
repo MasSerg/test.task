@@ -12,7 +12,7 @@ use TestTask\Helpers\DataHelper;
  *
  * fixed amount calculation
  */
-class FixedAmount
+final class FixedAmount
 {
     private float $fixedAmount;
 
